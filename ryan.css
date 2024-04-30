@@ -1,0 +1,185 @@
+@font-face{
+	src: url(PixelifySans-VariableFont_wght.ttf);
+	font-family:Text;
+}
+@font-face {
+	src: url(mistral.ttf);
+	font-family:Drive;
+}
+h1 {
+	text-align: center;
+	font-size: 100px;
+	font-family: Drive;
+	color:rgb(231, 61, 151);
+	font-size:5em;
+}
+
+.title {
+	transform: scale(0);
+	animation: show-in 2s ease 2s forwards;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+header {
+	z-index: 3;
+	box-shadow: 0px 0px 40px -1px rgba(123, 25, 188, 0.985);
+}
+
+.navdiv{
+	background-color: black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 30px;
+	padding: 0 15px;
+	
+}
+.navdiv a{
+	text-decoration: none;
+	color:white;
+	display: block;
+	padding: 20px;
+	text-align: center;
+	transition: all 0.3s ease;
+	position: relative;
+	z-index: 1;
+	user-select: none;
+	cursor: pointer;
+}
+
+.navdiv a::before {
+	content: "";
+	width: 100%;
+	position: absolute;
+	background: rgba(180, 44, 44, 0.544);
+	bottom: 0;
+	left: 0;
+	height: 0;
+	z-index: -1;
+	transition: all 0.3s ease;
+}
+
+.navdiv ul{ 
+	list-style-type: none;
+   padding: 10px;
+	margin: 0px;
+	color: white;
+	display: flex;
+	gap: 10px;
+	overflow: hidden;
+	float: left;
+	font-family: Text;
+	font-size: 20px;
+
+}
+.navdiv li {
+	transform: scale(0);
+}
+.navdiv li:nth-child(1) {
+	animation: show-in 2s ease 0s forwards;
+}
+.navdiv li:nth-child(2) {
+	animation: show-in 2s ease 0.5s forwards;
+}
+.navdiv li:nth-child(3) {
+	animation: show-in 2s ease 1s forwards;
+}
+.navdiv li:nth-child(4) {
+	animation: show-in 2s ease 1.5s forwards;
+}
+
+.navdiv a:hover::before{
+	height: 100%;
+}
+.navdiv li{
+	float: left;
+}
+
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes show-in {
+	0% {
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.video {
+	animation: rotation 20s linear 0s infinite ;
+}
+
+.nazik_pidorasik {
+	animation: show-in 2s ease 0s forwards;
+}
+
+.pidarasdiv
+{
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.pidarasdiv img {
+	height: 100%;
+	object-fit: cover;
+}
+.bg_wrapper{
+	z-index: -1;
+	width:100vw;
+	height:100vh;
+	position: fixed;
+	left:0;
+	top:0; 
+}
+.src{
+	width:100vw;
+	height:100vh;
+}
+.center{
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(0, 0, 0, 0.893);
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+main{
+	flex: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.niz{
+	color: white;
+	font-size: 35px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
+.niz p{
+	font-family: Drive;
+	font-size: 42px;
+	color:rgb(231, 61, 151);
+	font-style: bold;
+}
